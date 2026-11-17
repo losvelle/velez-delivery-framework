@@ -8,6 +8,7 @@ The package includes:
 
 - `velez-delivery`: the complete workflow, templates, and acceptance checks.
 - `velez-recipes`: phase-by-phase prompts and situational recipes.
+- `velez-help`: everyday explanations and examples for every skill, including help choosing one.
 - `grill-me`: a focused design interview.
 - Six Ponytail skills, selected pstack skills, and pstack principles except `principle-never-block-on-the-human`.
 - Optional Delivery Planner and Delivery Reviewer agents, plus an all-`auto` pstack role configuration.
@@ -15,13 +16,14 @@ The package includes:
 
 ## Skill reference
 
-All 48 skills are listed below. Select a skill name to read its instructions, or invoke it with `/skill-name` in a supported host. Start with `/velez-delivery` for the workflow or `/velez-recipes` for example prompts. Companion skills are optional, and VDF gates take precedence.
+All 49 skills are listed below. Select a skill name to read its instructions, or invoke it with `/skill-name` in a supported host. Start with `/velez-help` for plain-English explanations, `/velez-delivery` for the workflow, or `/velez-recipes` for example prompts. Companion skills are optional, and VDF gates take precedence.
 
 ### Workflow and planning
 
 | Skill | What it does |
 | --- | --- |
 | [velez-delivery](skills/velez-delivery/SKILL.md) | Guide discovery through authorized release, with evidence, review, and human acceptance gates. |
+| [velez-help](skills/velez-help/SKILL.md) | Explain every skill in everyday language and help choose one for a task. |
 | [velez-recipes](skills/velez-recipes/SKILL.md) | Choose phase-specific prompts and situational recipes for the bundled skills. |
 | [grill-me](skills/grill-me/SKILL.md) | Resolve consequential design choices through one focused question at a time. |
 | [in-your-own-words](skills/in-your-own-words/SKILL.md) | Restate the goal and problem to confirm shared understanding. |
@@ -124,12 +126,15 @@ unless you actually tested it.
 Start a fresh Copilot chat. In Copilot CLI, use `/skills reload` and `/skills info velez-delivery`; in VS Code, open **Chat: Open Customizations** and verify the personal skills appear. Try:
 
 ```text
+/velez-help
+/velez-help ponytail-review
+/velez-help I have an app idea. Where do I start?
 /velez-recipes Show the recipe for my current VDF phase.
 /velez-delivery Explore and plan this feature only: ...
 /grill-me Stress-test this idea before implementation: ...
 ```
 
-All 48 bundled skills set `disable-model-invocation: true` for explicit slash invocation on hosts that support this control. The six Ponytail headers add it; the copied pstack skills retain their upstream settings. Verify invocation behavior in your installed Copilot version. See [VS Code's skill invocation controls](https://code.visualstudio.com/docs/agent-customization/agent-skills).
+All 49 bundled skills set `disable-model-invocation: true` for explicit slash invocation on hosts that support this control. The six Ponytail headers add it; the copied pstack skills retain their upstream settings. Verify invocation behavior in your installed Copilot version. See [VS Code's skill invocation controls](https://code.visualstudio.com/docs/agent-customization/agent-skills).
 
 VDF gates win over companion advice. A companion never authorizes broader edits, skips required review or human acceptance, or grants release authority. See the [recipes and exclusions](skills/velez-recipes/SKILL.md) before using a companion. The copied skills may refer to upstream tools, commands, or workflows that are not bundled here. For example, Ponytail's band, hooks, automatic activation, and plugin updates are not installed by these copy commands. `ponytail-gain` reports upstream benchmark results, not savings measured in your project.
 
