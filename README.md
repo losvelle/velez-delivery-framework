@@ -123,6 +123,19 @@ unless you actually tested it.
 
 ## Start using it
 
+Describe the work you want and the limits that matter. VDF uses your existing project guidance and approvals; it does not need a company-policy interview before each task. It asks only when a specific missing decision or permission blocks the next action.
+
+For example:
+
+```text
+/velez-delivery Help me draft QA test scenarios for this sample booking requirement.
+Use invented data and return the scenarios in chat. Follow the project instructions
+and reuse approvals already given. Ask only about missing decisions that affect
+the scenarios. For ordinary working choices, state your recommendation and proceed.
+```
+
+Recommended choices help with routine decisions. They do not confirm unknown company rules or replace required permission. See [using your existing company process](POLICY-AND-TRANSFER.md#use-your-existing-company-process).
+
 Start a fresh Copilot chat. In Copilot CLI, use `/skills reload` and `/skills info velez-delivery`; in VS Code, open **Chat: Open Customizations** and verify the personal skills appear. Try:
 
 ```text

@@ -2,9 +2,13 @@
 
 VDF is a reusable workflow package. Installation does not grant organization approval, a model entitlement, access to protected data, or production authority. On a managed device, follow the organization's existing intake and customization rules.
 
-## Confirm before transfer or use
+## Use your existing company process
 
-Where organizational approval is required, confirm with the appropriate IT, security, or project owner:
+Use the account, project, and working practices your company already permits. VDF does not add a separate approval process. Reuse settled decisions for the same scope rather than asking everyone to complete a policy checklist at the start of each task.
+
+The assistant starts with the requested work and reads available project guidance. It asks only when a specific next action lacks necessary authorization, conflicts with a known rule, or has an unresolved access or data-handling issue. The question names the action and the reason it matters. Other authorized work can continue.
+
+If your company requires a review before installing external skills, use its existing process. The following are topics for that review when relevant, not questions every user must answer in chat:
 
 - Personal Copilot skills under `~/.copilot/skills/` and optional agents under `~/.copilot/agents/` are permitted. They are shared across projects, so approval must cover their intended use.
 - The selected account, model, projects, and data classifications are approved. Approval of an extension does not necessarily cover every model or repository.
@@ -24,7 +28,9 @@ Do not transfer assistant home directories, `.env` files, tokens, sessions, memo
 
 If a download, transfer route, extension, or feature is blocked, use the normal intake process. Do not evade the restriction. A manual-prompt alternative is appropriate only when that route and use are permitted too.
 
-## Suggested approval request
+## Optional approval request
+
+Use this only if your existing company process requires approval to install the package. Do not send it as a prerequisite for every task.
 
 > I would like to install a reviewed Velez Delivery Framework skill package using our existing approved Copilot account and model. It covers discovery, requirements, small deliverable issues, test-first implementation, independent review, human acceptance, and authorized release, with optional companion skills. Skill folders and their resources/licenses would go in my personal `~/.copilot/skills/` directory, and two optional read/search-only agent definitions in `~/.copilot/agents/`. No customization files would be installed into project repositories. An optional plain-text role preference file would go in `~/.agents/pstack-models.md`, with every role set to `auto` and subagent model arguments unset. This installation adds no provider, credentials, hooks, background service, or auto-approval setting. Companion instructions can refer to tools or external dependencies; their execution remains subject to our normal controls. Is this personal customization permitted for the intended projects and data classes, and what intake and review route should I use?
 

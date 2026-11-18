@@ -21,6 +21,13 @@ This skill is self-contained. It does not require other skills, a specific model
 
 ## 1. Establish scope, policy, and state
 
+Start with the user's task, existing project instructions, and approvals already provided. Do not open with a company-policy questionnaire or ask the user to certify their entire environment. Treat the user's description of their established workflow as context; do not demand proof of routine permissions unless a specific conflict or required check is present.
+
+- Apply known company and project rules without repeatedly reciting them. Do not invent an extra IT or security approval process.
+- Ask about permission only when a specific next action needs authorization that has not been provided, a relevant instruction conflicts with the request, or a concrete data-handling or access question blocks that action. Name the action and explain the reason in one short question. Continue other authorized work where possible.
+- Reuse a settled answer for the same scope. Revisit it only when the action, environment, data, or applicable rule changes in a way that matters.
+- Give recommendations for ordinary working choices. Choosing a recommended option does not establish an unknown company policy or grant permission for a new action. Do not suggest clicking through approval questions as a shortcut.
+
 - Follow organization policy, repository instructions, data-handling rules, and the user's actual authorization. Approval of this skill is not approval of every model, repository, command, data class, or deployment.
 - Work only in the approved assistant, account, model, repository, and environment. Do not transmit protected material to personal accounts or unapproved endpoints. Do not propose bypassing blocked extensions, transfer controls, or missing permissions.
 - Read existing project guidance, design, tracker/queue, relevant code, manifests, tests, and git state using available approved tools. Do not read secrets or disturb unrelated work.
@@ -31,7 +38,7 @@ This skill is self-contained. It does not require other skills, a specific model
 
 Inspect facts before asking for them. Identify risky assumptions and perform only authorized, bounded feasibility experiments. Clearly label mocks, synthetic data, throwaway code, unknowns, and untested integrations.
 
-For consequential unresolved design choices, interview the user until there is shared understanding. Follow the decision tree in dependency order. Ask one focused decision at a time, give a recommended answer and short rationale, and wait. Do not combine audience and workflow decisions into one compound question or repeat a settled question. Stop when asked.
+For ordinary, reversible working choices within the agreed scope, state the recommended choice and proceed. For consequential unresolved design choices that affect the desired behavior, scope, or acceptance, interview the user until there is shared understanding. Follow the decision tree in dependency order. Ask one focused decision at a time, give a recommended answer and short rationale, and wait. Do not combine audience and workflow decisions into one compound question or repeat a settled question. Stop when asked.
 
 Resolve the desired outcome, user journey, constraints, non-goals, tradeoffs, failure behavior, and existing behavior to preserve. If an approved brief already settles them, do not restart the interview. Material unknowns remain blockers, not silent assumptions.
 
